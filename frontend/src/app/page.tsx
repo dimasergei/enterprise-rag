@@ -11,7 +11,7 @@ export default function HomePage() {
         <div className="max-w-6xl mx-auto px-4 py-4">
           <div className="flex items-center justify-between">
             <div className="flex items-center space-x-2">
-              <FileText className="w-8 h-8 text-blue-500" />
+              <FileText className="w-8 h-8 bg-gradient-to-r from-purple-600 to-blue-600 bg-clip-text text-transparent" />
               <h1 className="text-2xl font-bold text-white">EnterpriseRAG</h1>
             </div>
             <div className="flex items-center space-x-4">
@@ -21,7 +21,7 @@ export default function HomePage() {
                 </Button>
               </Link>
               <Link href="/dashboard">
-                <Button className="bg-blue-600 hover:bg-blue-700">
+                <Button className="bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700">
                   View Metrics
                 </Button>
               </Link>
@@ -35,15 +35,27 @@ export default function HomePage() {
         <div className="text-center">
           <h1 className="text-5xl font-bold text-white mb-6">
             Production Document Q&A with
-            <span className="text-blue-400"> Hybrid Retrieval</span>
+            <span className="bg-gradient-to-r from-purple-600 to-blue-600 bg-clip-text text-transparent">Hybrid Retrieval</span>
           </h1>
           <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
             Enterprise-grade RAG system that combines vector search and BM25 with semantic caching,
             delivering sub-2-second response times on 50K+ documents.
           </p>
+          <div className="flex items-center justify-center space-x-4 mb-8">
+            <Link href="/chat?query=What are our security protocols?">
+              <Button variant="outline" size="sm" className="border-gray-600 text-white hover:bg-gray-800">
+                What are our security protocols?
+              </Button>
+            </Link>
+            <Link href="/chat?query=Q3 revenue performance analysis">
+              <Button variant="outline" size="sm" className="border-gray-600 text-white hover:bg-gray-800">
+                Q3 revenue performance analysis
+              </Button>
+            </Link>
+          </div>
           <div className="flex items-center justify-center space-x-4">
             <Link href="/chat">
-              <Button size="lg" className="bg-blue-600 hover:bg-blue-700 text-lg px-8 py-3">
+              <Button size="lg" className="bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700 text-lg px-8 py-3">
                 Try Live Demo
                 <ArrowRight className="ml-2 w-5 h-5" />
               </Button>
